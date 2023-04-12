@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Apr  5 19:32:40 2023
+
+@author: jpwu
+"""
+
+import streamlit as st
+import time
+
+progress_text = "Operation in progress. Please wait."
+my_bar = st.progress(0, text=progress_text)
+
+for percent_complete in range(100):
+    time.sleep(0.1)
+    my_bar.progress(percent_complete + 1, text=progress_text)
